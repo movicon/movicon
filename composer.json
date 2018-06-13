@@ -1,5 +1,16 @@
 {
+    "name": "movicon/movicon",
+    "description": "A basic template for the MoViCon framework.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gonzalo Chumillas",
+            "email": "gchumillas@email.com"
+        }
+    ],
     "require": {
+        "php": ">=7.2.0",
         "movicon/db": "^1.0",
         "movicon/http": "^1.0"
     },
