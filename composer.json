@@ -1,0 +1,11 @@
+{
+    "require": {
+        "movicon/db": "^1.0",
+        "movicon/http": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "app/src"
+        }
+    }
+}
