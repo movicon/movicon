@@ -39,6 +39,6 @@ class ItemModel extends DbActiveRecord
         from item
         order by id";
 
-        return iterator_to_array($db->query($sql));
+        return $db->queryAll($sql);
     }
 }
