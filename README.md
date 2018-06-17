@@ -55,17 +55,24 @@ phpcs.xml
 README.md
 ```
 
-### Root directory
+### top directory
 
 Third-party libraries and config files are under the 'top directory' and they are not accessible from web.
 
 ### app/ folder
 
-The **/app** folder represents the 'public directory' or the `DOCUMENT_ROOT`, and all assets under this folder are accessible from the web. Note the existence of these two .htaccess files:
+The **/app** folder represents the 'public directory' or the `DOCUMENT_ROOT`, and it is accessible from web. Note the existence of two .htaccess files:
 
-   1. `app/.htaccess` prevents from the users to 'browse' the directory.
+   1. `app/.htaccess` prevents from the users to 'list' the directory.
    2. `app/src/.htaccess` prevents from the user to access files directly.
    
-Configuration files and thirdty-party libraries are at the same level of the `app/` folder and they are inaccessible from the web.
-   
+The files `route1.php`, `route2.php`, etc... represents the different `routes`. We'll talk about `routes` later in this tutorial.
+
+### app/src/ folder
+
+The **app/src/** folder contains the source code of the application. Specifically, it contains the following three important directories:
+
+  1. `app/src/models` contains the 'models'.
+  2. `app/src/views` contains the 'views'.
+  3. `app/src/controllers` contains the 'controllers'.
 
