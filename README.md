@@ -54,4 +54,11 @@ LICENSE
 phpcs.xml
 README.md
 ```
-The **/app** folder represents the 'public directory'.
+The **/app** folder represents the 'public directory' or the `DOCUMENT_ROOT`, and all assets under this folder are accessible from the web. Note the existence of these two .htaccess files:
+
+   1. `app/.htaccess` prevents from the users to 'browse' the directory.
+   2. `app/src/.htaccess` prevents from the user to access files directly.
+   
+Configuration files and thirdty-party libraries are at the same level of the `app/` folder and they are inaccessible from the web.
+   
+
