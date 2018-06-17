@@ -32,11 +32,11 @@ app/  <!-- public directory or DOCUMENT_ROOT
   |     |     |-- Route1Controller.php
   |     |     |-- Route2Controller.php
   |     |     |-- ...
-  |     |-- models/ <!-- the 'models'
+  |     |-- models/      <!-- the 'models'
   |     |     |-- Entity1Model.php
   |     |     |-- Entity2Model.php
   |     |     |-- ...
-  |     |-- views/  <!-- the 'views'
+  |     |-- views/       <!-- the 'views'
   |     |     |-- Route1View.php
   |     |     |-- Route2View.php
   |     |     |-- ...
@@ -70,7 +70,7 @@ The files `route1.php`, `route2.php`, etc... represents the different `routes`. 
 
 ### app/src/ folder
 
-The **app/src/** folder contains the source code of the application. Specifically, it contains the following three important directories, which represent the Model View Controller design pattern:
+The **app/src/** folder contains the source code of the application. Specifically, it contains the following three important directories, which represent the Model View Controller pattern:
 
   1. `app/src/models` contains the 'models'.
   2. `app/src/views` contains the 'views'.
