@@ -19,7 +19,7 @@ composer create-project movicon/movicon <myproject>
 
 ## Project structure
 
-The framework contains the following structure, that we'll study next:
+The framework contains the following structure, that we'll discuss later:
 
 ```text
 app/
@@ -54,6 +54,13 @@ LICENSE
 phpcs.xml
 README.md
 ```
+
+### Root directory
+
+Third-party libraries and config files are under the 'top directory' and they are not accessible from web.
+
+### app/ folder
+
 The **/app** folder represents the 'public directory' or the `DOCUMENT_ROOT`, and all assets under this folder are accessible from the web. Note the existence of these two .htaccess files:
 
    1. `app/.htaccess` prevents from the users to 'browse' the directory.
