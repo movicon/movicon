@@ -74,7 +74,7 @@ The `vendor/` folder contains third-party software installed by the 'composer' p
 
 ## Routes
 
-Unlike other systems this framework doesn't implement any mechanism to incorportate 'routes'. A route is nothing other that a script under the `public/` directory responsible for instantiate a 'view' and prints a document. If you take a look at the `public/route1.php`, we'll see how it works clearly:
+Unlike other systems this framework doesn't implement any mechanism to incorportate 'routes'. A route is nothing other that a script under the `public/` directory responsible for instantiate a 'view' and prints a document. If you take a look at the `public/route1.php` script, you can see how it works clearly:
 
 ```php
 require_once "../vendor/autoload.php";
@@ -84,4 +84,19 @@ use views\Route1View;
 // instantiates a view and prints the document
 $v = new Route1View();
 $v->printDocument();
+```
+
+## Models
+
+A 'model' represents an 'entity' in the MVC design pattern. Usually a 'model' extends the `DbActiveRecord` class, which implements the active record pattern.
+
+```php
+namespace models;
+use movicon\db\DbActiveRecord;
+use movicon\db\DbConnection;
+
+class ItemModel extends DbActiveRecord
+{
+
+}
 ```
