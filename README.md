@@ -12,10 +12,12 @@ This framework requires [Composer](https://getcomposer.org/), [MySQL](https://ww
 
 ## Install
 
-Open a terminal and execute the [create-project](https://getcomposer.org/doc/03-cli.md#create-project) command to generate the project structure (replace `<myproject>` with your project name):
+Open a terminal and execute the [create-project](https://getcomposer.org/doc/03-cli.md#create-project) command to generate the structure of the project (replace `<myproject>` with your project name):
 ```bash
 composer create-project movicon/movicon <myproject>
 ```
+
+Finaly change the `config.php` file with the appropriate values to connect to a MySQL database.
 
 ## Project structure
 
@@ -98,7 +100,7 @@ A 'view' is responsible for preparing the document to be presented to the user. 
 
 A 'controller' is responsible for 'intercepting' and 'processing' HTTP requests. It extends the `HttpController` class. More information about this class can be found here: [MoViCon HTTP](https://github.com/movicon/movicon-http).
 
-## Apache2: Virtual Host configuration
+## Configuring a Virtual Host in Apache2
 
 We mentioned previously that the `public/` directory represents the `DOCUMENT_ROOT` and we must take into account when configuring a Virtual Host in [Apache2](https://httpd.apache.org/). A typical Virtual Host configuration may look as follows (replace `myproject.localhost` and `/path/to/myproject/public` by the correct values):
 
