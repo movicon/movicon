@@ -66,7 +66,7 @@ The `source/` folder contains the source code of the project. It has three relev
  2. `source/views`: This folder contains the 'views'.
  3. `source/controllers`: This folder contains the 'controllers'.
 
-Additionally this folder contains a `source/core` folder, used for 'internal classes'.
+Additionally we have a `source/core` folder for 'internal classes'.
 
 ### `vendor/` folder
 
@@ -96,8 +96,38 @@ A 'view' is responsible for preparing the document to be presented to the user. 
 
 ## Controllers
 
-A 'controller' is responsible for 'intercepts' and 'process' HTTP requests. It extends the `HttpController` class. More information about this class can be found here: [MoViCon HTTP](https://github.com/movicon/movicon-http).
+A 'controller' is responsible for 'intercepting' and 'processing' HTTP requests. It extends the `HttpController` class. More information about this class can be found here: [MoViCon HTTP](https://github.com/movicon/movicon-http).
+
+## Apache2: Virtual Host configuration
+
+We mentioned previously that the `public/` directory represents the `DOCUMENT_ROOT` and we must take into account when configuring a Virtual Host in [Apache2](https://httpd.apache.org/). A typical Virtual Host configuration may look as follows (replace `myproject.localhost` and `/path/to/myproject/public` by the correct values):
+
+```text
+<VirtualHost *:80>
+  ServerName myproject.localhost
+
+  # The public/ folder represents the DOCUMENT_ROOT
+  DocumentRoot /path/to/myproject/public
+
+  <Directory /path/to/myproject/public>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Require all granted
+  </Directory>
+</VirtualHost>
+```
+
+Then, copy the previous sinppet to the following location (replace `myproject.localhost.conf` by the appropriate name):  ``/etc/apache2/sites-available/myproject.localhost.conf`
+
+
+After that, execute the following commands to enable the Virtual Host:
+```bash
+sudo a2ensite myproject.localhost
+sudo service apache2 reload
+```
+
+And then test your application by opening the following link: http://myproyect.localhost/route1.php
 
 ## Examples
 
-You can see a complete example here: [MoViCon TODO manager](https://github.com/movicon/movicon-example).
+The following example is a simple TODO Manager that illustrate how this framework works: [MoViCon TODO manager](https://github.com/movicon/movicon-example).
