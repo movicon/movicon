@@ -88,15 +88,7 @@ $v->printDocument();
 
 ## Models
 
-A 'model' represents an 'entity' in the MVC design pattern. Usually a 'model' extends the `DbActiveRecord` class, which implements the active record pattern.
+A 'model' represents an 'entity' in the MVC design pattern. Usually a 'model' extends the `DbActiveRecord` class, which implements the active record pattern. You can find more information about this class here:  
+https://github.com/movicon/movicon-db
 
-```php
-namespace models;
-use movicon\db\DbActiveRecord;
-use movicon\db\DbConnection;
-
-class ItemModel extends DbActiveRecord
-{
-
-}
 ```
