@@ -71,3 +71,17 @@ Additionally this folder contains the `source/core` folder, used for 'internal c
 ### `vendor/` folder
 
 The `vendor/` folder contains third-party software installed by the 'composer' package manager. It shouldn't be part of the repository and it was intentionally intentionally ignored by GIT (see `.gitignore` file).
+
+## Routes
+
+Unlike other systems this framework doesn't implement any mechanism to incorportate 'routes'. A route is nothing other that a script under the `public/` directory responsible for instantiate a 'view' and prints a document. If you take a look at the `public/route1.php`, we'll see how it works clearly:
+
+```php
+require_once "../vendor/autoload.php";
+require_once "../config.php";
+use views\Route1View;
+
+// instantiates a view and prints the document
+$v = new Route1View();
+$v->printDocument();
+```
