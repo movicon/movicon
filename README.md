@@ -12,14 +12,14 @@ This framework requires [Composer](https://getcomposer.org/), [MySQL](https://ww
 
 ## Install
 
-Open a terminal and execute the [create-project](https://getcomposer.org/doc/03-cli.md#create-project) command to generate the project structure (replace `<myproject>` by your project name):
+Open a terminal and execute the [create-project](https://getcomposer.org/doc/03-cli.md#create-project) command to generate the project structure (replace `<myproject>` with your project name):
 ```bash
 composer create-project movicon/movicon <myproject>
 ```
 
 ## Project structure
 
-The framework contains the following structure, that we'll discuss later:
+The framework contains the following structure:
 
 ```text
 public/  <!-- public directory or DOCUMENT_ROOT
