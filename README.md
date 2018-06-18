@@ -100,4 +100,4 @@ A 'controller' is responsible for 'intercepts' and 'process' HTTP requests. It e
 
 ## Examples
 
-You can see a complete example here [MoViCon TODO manager](https://github.com/movicon/movicon-example).
+You can see a complete example here: [MoViCon TODO manager](https://github.com/movicon/movicon-example).
