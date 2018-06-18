@@ -56,25 +56,25 @@ README.md
 
 ### `public/` folder
 
-The `public/` folder contains the 'routes' and any other assets accessible from the web. It represents the `DOCUMENT_ROOT`. We'll talk about 'routers' later in this manual.
+The `public/` folder contains the 'routes' and any other resource accessible from the web. It represents the `DOCUMENT_ROOT`. We'll talk about 'routers' later in this manual.
 
 ### `source/` folder
 
-The `source/` folder contains the source code of the project. It has three relevant folders representing the [Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern:
+The `source/` folder contains the source code of the project. It has three relevant folders, representing the [Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern:
 
  1. `source/models`: This folder contains the 'models'.
  2. `source/views`: This folder contains the 'views'.
  3. `source/controllers`: This folder contains the 'controllers'.
 
-Additionally this folder contains the `source/core` folder, used for 'internal classes'.
+Additionally this folder contains a `source/core` folder, used for 'internal classes'.
 
 ### `vendor/` folder
 
-The `vendor/` folder contains third-party software installed by the 'composer' package manager. It shouldn't be part of the repository and it was intentionally intentionally ignored by GIT (see `.gitignore` file).
+The `vendor/` folder contains third-party software installed by the [Composer](https://getcomposer.org/) package manager. It shouldn't be part of the repository and it was intentionally ignored by GIT (see `.gitignore` file).
 
 ## Routes
 
-Unlike other systems this framework doesn't implement any mechanism to incorportate 'routes'. A route is nothing other that a script under the `public/` directory responsible for instantiate a 'view' and prints a document. If you take a look at the `public/route1.php` script, you can see how it works clearly:
+Unlike other systems this framework doesn't implement any mechanism to incorportate 'routes'. A route is nothing more than a script under the `public/` directory responsible for instantiating a 'view' and printing a document. If you take a look at the `public/route1.php` script, you can see how it works clearly:
 
 ```php
 require_once "../vendor/autoload.php";
@@ -88,11 +88,11 @@ $v->printDocument();
 
 ## Models
 
-A 'model' represents an 'entity' in the [Mvc](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern. Usually a 'model' extends the `DbActiveRecord` class, which implements the [active record](https://en.wikipedia.org/wiki/Active_record_pattern) pattern. You can use the `DbActiveRecord` class to insert, edit or delete records. More information about this class can be found here: [MoViCon DB](https://github.com/movicon/movicon-db)
+A 'model' represents an 'entity' in the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern. In general a 'model' extends the `DbActiveRecord` class, which implements the [active record](https://en.wikipedia.org/wiki/Active_record_pattern) pattern. You can use the `DbActiveRecord` class to insert, edit or delete records. More information about this class can be found here: [MoViCon DB](https://github.com/movicon/movicon-db)
 
 ## Views
 
-A 'view' is responsible for preparing the document to be presented to the user. It extends the `HttpView` class, which contains the abstract method `getDocument()` and must be implemented. More information about this class can be found here: [MoViCon HTTP](https://github.com/movicon/movicon-http).
+A 'view' is responsible for preparing the document to be presented to the user. It extends the `HttpView` class, which contains the abstract method `getDocument()` and must be implemented in all cases. More information about this class can be found here: [MoViCon HTTP](https://github.com/movicon/movicon-http).
 
 ## Controllers
 
