@@ -66,4 +66,8 @@ The `source/` folder contains the source code of the project. It has three relev
  2. `source/views`: This folder contains the 'views'.
  3. `source/controllers`: This folder contains the 'controllers'.
 
-Additionally this folder contains the `source/core` folder, containing the 'internal classes'.
+Additionally this folder contains the `source/core` folder, used for 'internal classes'.
+
+### `vendor/` folder
+
+The `vendor/` folder contains third-party software installed by the 'composer' package manager. It shouldn't be part of the repository and it was intentionally intentionally ignored by GIT (see `.gitignore` file).
